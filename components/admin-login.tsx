@@ -13,7 +13,7 @@ export default function AdminLogin(){
   }catch(error){setError(error instanceof Error?error.message:'Sign-in failed. Please try again.');setBusy(false);}
  }
  return <form className="vercel-login-form" onSubmit={signIn}>
-  <label>Admin email<input name="email" type="email" required autoComplete="username" defaultValue="booking.offdaya@gmail.com"/></label>
+  <label>Admin email<input name="email" type="email" required autoComplete="username" defaultValue="adnan@offdaya.in"/></label>
   <label>Password<input name="password" type="password" required minLength={8} maxLength={256} autoComplete="current-password"/></label>
   {error&&<p role="alert" className="login-error">{error}</p>}
   <button className="button" disabled={busy}>{busy?'Signing in…':'Sign in to OFFDAYA'} ↗</button>
