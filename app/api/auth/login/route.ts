@@ -6,7 +6,7 @@ export async function POST(request:Request){
  if(!backendConfigured())return NextResponse.json({error:'Admin setup is incomplete.'},{status:503});
  let body;try{body=await request.json()}catch{return NextResponse.json({error:'Invalid request.'},{status:400})}
  const email=typeof body.email==='string'?body.email.trim().toLowerCase():'';const password=typeof body.password==='string'?body.password:'';
- if(email!==(process.env.ADMIN_EMAIL||'booking.offdaya@gmail.com').trim().toLowerCase()||password.length<8||password.length>256)return NextResponse.json({error:'Invalid email or password.'},{status:401});
+ if(email!==(process.env.ADMIN_EMAIL||'adnan@offdaya.in').trim().toLowerCase()||password.length<8||password.length>256)return NextResponse.json({error:'Invalid email or password.'},{status:401});
  try{const supabase=await sessionSupabase();const {data,error}=await supabase.auth.signInWithPassword({email,password});
  if(error||!data.user?.email_confirmed_at){await supabase.auth.signOut();return NextResponse.json({error:'Invalid email or password.'},{status:401});}
  return NextResponse.json({ok:true},{headers:{'Cache-Control':'private, no-store'}});
