@@ -6,7 +6,7 @@ A standalone Next.js project for a **new GitHub repository**. Includes the lates
 
 1. Create a Supabase project in your own account. Keep the database password private.
 2. Open **SQL Editor**, paste the entire contents of `supabase/001_setup.sql`, and run it once in this new project.
-3. In **Authentication → Users**, choose **Add user → Create new user**. Create `booking.offdaya@gmail.com` with a strong password you choose, and mark the email confirmed. Do not paste this password into chat or code.
+3. In **Authentication → Users**, choose **Add user → Create new user**. Create `adnan@offdaya.in` with a strong password you choose, and mark the email confirmed. Do not paste this password into chat or code.
 4. Disable public email signups in your Supabase authentication settings; this website has no signup form.
 5. Find the project URL, publishable key and server secret key in the project's API/Connect settings. The legacy service-role key is also supported as `SUPABASE_SERVICE_ROLE_KEY` instead of `SUPABASE_SECRET_KEY`.
 
@@ -39,7 +39,7 @@ No GitHub account or remote repository is created by unzipping these files.
 | `SUPABASE_URL` | Your Supabase project URL |
 | `SUPABASE_PUBLISHABLE_KEY` | Your publishable API key |
 | `SUPABASE_SECRET_KEY` | Your server secret API key; mark sensitive |
-| `ADMIN_EMAIL` | `booking.offdaya@gmail.com` |
+| `ADMIN_EMAIL` | `adnan@offdaya.in` |
 | `SITE_URL` | Your final HTTPS website origin, with no trailing slash |
 
 Never prefix the server secret with `NEXT_PUBLIC_`. Never put a key or password in a GitHub file. Deploy again after changing environment variables. While testing, set `SITE_URL` to the new Vercel production URL; update it when the custom domain moves.

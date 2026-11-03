@@ -14,7 +14,7 @@
 ## Not yet verified against live accounts
 
 - Supabase project creation, SQL application and actual Supabase authentication/storage policies.
-- A real admin login with booking.offdaya@gmail.com.
+- A real admin login with adnan@offdaya.in.
 - GitHub remote repository creation and push.
 - Vercel deployment and custom-domain migration.
 - Browser visual QA on the new Vercel deployment.
