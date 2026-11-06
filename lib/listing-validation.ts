@@ -17,6 +17,8 @@ export const listingSchema = z.object({
   price: z.number().int().min(0).max(1000000000),
   unit: z.enum(['person', 'couple', 'night', 'package']),
   summary: z.string().trim().min(10).max(4000),
+  seoTitle: z.string().trim().max(120).optional(),
+  seoDescription: z.string().trim().max(300).optional(),
   story: z.string().trim().max(12000).optional(),
   tagline: z.string().trim().max(250).optional(),
   image: z.union([z.literal(''), image]),

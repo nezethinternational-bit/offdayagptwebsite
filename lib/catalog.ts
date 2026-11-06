@@ -1,4 +1,4 @@
-export type Listing = { id:string; kind:'package'|'stay'; status:'draft'|'published'|'archived'; title:string; location:string; type:string; duration:string; price:number; unit:string; summary:string; story?:string; tagline?:string; image:string; gallery:string[]; highlights:string[]; itinerary:{title:string;description:string}[]; inclusions:string[]; exclusions:string[]; amenities:string[] };
+export type Listing = { id:string; kind:'package'|'stay'; status:'draft'|'published'|'archived'; title:string; location:string; type:string; duration:string; price:number; unit:string; summary:string; seoTitle?:string; seoDescription?:string; story?:string; tagline?:string; image:string; gallery:string[]; highlights:string[]; itinerary:{title:string;description:string}[]; inclusions:string[]; exclusions:string[]; amenities:string[] };
 export const initialListings: Listing[] = [
 {
  id:'lakshadweep-escape',kind:'package',status:'published',title:'Lakshadweep Escape',location:'Agatti & Kalpitti',type:'Island escape',duration:'3 Nights / 4 Days',price:1150000,unit:'person',
