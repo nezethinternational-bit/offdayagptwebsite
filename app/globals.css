@@ -9,3 +9,17 @@
 .traveller-gallery-heading{font-size:21px;margin:35px 0 20px}.gallery.traveller-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.gallery.traveller-gallery img{width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;background:var(--pale);flex:initial;border-radius:5px}.detail-hero>img[src*="kashmir-trip"]{object-position:center 62%}.card-image img[src*="kashmir-trip"]{object-position:center 58%}
 @media(max-width:480px){.gallery.traveller-gallery{gap:10px}.traveller-gallery-heading{font-size:18px}}
 .vercel-login-form{width:400px;max-width:100%;margin:10px 0 35px}.vercel-login-form label{display:block;font-size:12px;margin-bottom:20px}.vercel-login-form input{margin-top:8px}.vercel-login-form .button{width:100%}.login-error{font-size:12px;color:#a12d2d}.setup-notice{max-width:600px;background:white;border:1px solid var(--line);padding:25px;margin-bottom:30px}.setup-notice h2{font-size:22px}.logout-button{display:flex;align-items:center;gap:10px;border:0;padding:0;background:none;color:inherit;font-size:11px}.admin-login{overflow-wrap:anywhere}
+.page-editor-fields {
+  display: grid;
+  gap: 1rem;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.page-editor-fields label {
+  display: grid;
+  gap: .4rem;
+}
+.page-copy {
+  white-space: pre-line;
+}

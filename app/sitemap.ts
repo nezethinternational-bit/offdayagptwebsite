@@ -1,5 +1,12 @@
-import type {MetadataRoute} from 'next';
-import {siteOrigin} from '../lib/site-url';
-import {listings} from '../lib/server-catalog';
-export default async function sitemap():Promise<MetadataRoute.Sitemap>{const items=await listings();return ['','/packages','/stays','/services','/contact','/about',...items.filter(x=>x.kind==='package').map(x=>'/packages/'+x.id)].map(path=>({url:new URL(path,siteOrigin()).toString()}));}
-export const dynamic='force-dynamic';
+import type { MetadataRoute } from 'next';
+import { siteOrigin } from '../lib/site-url';
+import { listings } from '../lib/server-catalog';
+import { pages } from '../lib/site-pages';
+
+export const dynamic = 'force-dynamic';
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const items = await listings();
+  const paths = items.map(item => '/' + (item.kind === 'package' ? 'packages' : 'stays') + '/' + item.id);
+  return [...Object.keys(pages), ...paths].map(path => ({ url: new URL(path, siteOrigin()).href }));
+}
