@@ -1,3 +1,4 @@
+import { revalidatePath, revalidateTag } from 'next/cache';
 import { z } from 'zod';
 import { adminUser, sameOrigin } from '../../../../lib/admin-auth';
 import { isPagePath } from '../../../../lib/site-pages';
@@ -27,5 +28,8 @@ export async function PUT(request: Request) {
     ...parsed.data, updated_at: new Date().toISOString(),
   });
   if (error) return Response.json({ error: 'Page could not be saved.' }, { status: 503 });
+  revalidateTag('offdaya-pages', { expire: 0 });
+  revalidatePath(parsed.data.path);
+  revalidatePath('/sitemap.xml');
   return Response.json({ ok: true });
 }
