@@ -1,10 +1,15 @@
 import { cache } from 'react';
 import { notFound } from 'next/navigation';
 import TravelSite from '../../../components/travel-site';
+import StructuredData from '../../../components/structured-data';
 import { listings } from '../../../lib/server-catalog';
 import { seoMetadata } from '../../../lib/site-seo';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300;
+export async function generateStaticParams() {
+  return (await listings()).map(item => ({ page: item.kind === 'stay' ? 'stays' : 'packages', slug: item.id }));
+}
+
 type Props = { params: Promise<{ page: string; slug: string }> };
 const publishedListings = cache(() => listings());
 
@@ -26,5 +31,5 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function Page({ params }: Props) {
   const { page, item, initial } = await route(params);
-  return <TravelSite measurementId={process.env.GOOGLE_ANALYTICS_ID} page={'/' + page} slug={item.id} initial={initial} />;
+  return <><StructuredData path={'/' + page + '/' + item.id} title={item.seoTitle || item.title + ' | OFFDAYA'} description={item.seoDescription || item.summary} updatedAt={item.updatedAt}/><TravelSite measurementId={process.env.GOOGLE_ANALYTICS_ID} page={'/' + page} slug={item.id} initial={initial} /></>;
 }
