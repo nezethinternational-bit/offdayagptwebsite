@@ -48,7 +48,7 @@ export default function PageEditor({ entries }: { entries: Entry[] }) {
         <label>Meta description<textarea required minLength={10} maxLength={300} rows={3} value={content.description} onChange={event => update('description', event.target.value)} /></label>
         <label>Page headline<input maxLength={150} value={content.heading} onChange={event => update('heading', event.target.value)} placeholder="Leave blank for the original headline" /></label>
         <label>Introduction<textarea maxLength={1000} rows={3} value={content.introduction} onChange={event => update('introduction', event.target.value)} /></label>
-        <label>Extra page copy<textarea maxLength={10000} rows={6} value={content.body} onChange={event => update('body', event.target.value)} /></label>
+        <label>Page content (use ## before section headings)<textarea maxLength={10000} rows={6} value={content.body} onChange={event => update('body', event.target.value)} /></label>
         <div className="section-heading">
           <button className="button">{saving ? 'Saving…' : 'Save and publish'}</button>
           <a href={path} target="_blank" rel="noreferrer">View page ↗</a>
