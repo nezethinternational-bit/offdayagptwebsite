@@ -1,0 +1,19 @@
+# OFFDAYA
+
+> OFFDAYA plans holidays, stays and workations, with Lakshadweep island escapes, classic and offbeat Kashmir journeys, and Kerala resort and homestay enquiries.
+
+## Website
+
+- [About the team](https://offdaya.in/about): Our story and approach to personal travel planning.
+- [Holiday packages](https://offdaya.in/packages): Itineraries, inclusions and enquiries. Quotations are provided on request.
+- [Lakshadweep Escape](https://offdaya.in/packages/lakshadweep-escape): A 3-night, 4-day Agatti and Kalpitti itinerary.
+- [Beyond Kashmir](https://offdaya.in/packages/beyond-kashmir): Offbeat Kashmir routes, villages and trails.
+- [Classic Kashmir](https://offdaya.in/packages/classic-kashmir): Familiar Kashmir destinations and sightseeing.
+- [Kerala stays](https://offdaya.in/stays): Stay enquiries for Kakkadampoyil, Wayanad, Anakkampoyil, Munnar, Poovaranthode and Thusharagiri.
+- [Services](https://offdaya.in/services): Complete planning and local coordination.
+- [Contact](https://offdaya.in/contact): Email hello@offdaya.in or WhatsApp +91 79948 49989.
+- [Sitemap](https://offdaya.in/sitemap.xml): Published website pages.
+
+## Booking details
+
+The website accepts enquiries. Availability, accommodation, inclusions, activities, permits and quotations are confirmed before booking. Destination imagery includes illustrative AI-generated scenes and traveller-supplied photographs.
